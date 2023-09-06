@@ -5,5 +5,5 @@ use crate::adapters::api::{users::users_controllers};
 
 pub fn routes(config: &mut web::ServiceConfig) {
     config
-        .service(web::scope("api").configure(users_controllers::routes));
+        .service(web::scope("/api/users").configure(users_controllers::routes));
 }
